@@ -1,10 +1,8 @@
 <template>
-  <v-app>
+  <v-app id="main" :style="{background: $vuetify.theme.themes[theme].background}">
     <Navbar />
-    <v-content class="grey lighten-4">
-      <v-container fluid>
-        <router-view></router-view>
-      </v-container>
+    <v-content class="mx-4 mb-4 mt-4">
+      <router-view></router-view>
     </v-content>
   </v-app>
 </template>
@@ -20,5 +18,10 @@ export default {
   data: () => ({
     //
   }),
+  computed:{
+    theme(){
+      return (this.$vuetify.theme.dark) ? 'dark' : 'light'
+    }
+  }
 };
 </script>
