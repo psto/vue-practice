@@ -36,7 +36,15 @@ import store from "../store.js"
 <style scoped>
 #nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+#nav ul {
+  display: flex;
+}
+
+#nav li {
+  flex: auto ;
 }
 
 #nav a {
